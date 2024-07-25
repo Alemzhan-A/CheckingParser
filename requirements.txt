@@ -1,2 +1,3 @@
 asyncio
 git+https://github.com/ultrafunkamsterdam/nodriver.git
+undetected-chromedriver
