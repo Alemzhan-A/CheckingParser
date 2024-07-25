@@ -1,16 +1,12 @@
-FROM python:3.8-slim
+FROM python:3.9-slim
 
 WORKDIR /app
 
-# Установка git и других необходимых инструментов
+# Установка git
 RUN apt-get update && apt-get install -y git && apt-get clean
 
 COPY requirements.txt requirements.txt
-
-# Установка зависимостей по одной для диагностики
-RUN pip install asyncio
-RUN pip install git+https://github.com/ultrafunkamsterdam/nodriver.git
-RUN pip install undetected-chromedriver
+RUN pip install -r requirements.txt
 
 COPY . .
 
