@@ -12,7 +12,7 @@ async def get_html_content(url):
     config.browser_args.extend([
         '--disable-blink-features=AutomationControlled',
         '--disable-extensions',
-        '--no_sandbox=True',
+        '--no_sandbox',
         '--disable-infobars',
         '--disable-gpu'
     ])
